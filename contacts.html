@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220618204128">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper price_wrapper">
+		<header data-scroll="0" class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<div class="menu__logo">
+						<a href="index.html">
+							<img src="img/logo-white.svg" alt="">
+						</a>
+					</div>
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html#portfolio" class="menu__link">ПОРТФОЛИО</a></li>
+							<li class="menu__item"><a href="services.html" class="menu__link">УСЛУГИ И ЦЕНЫ</a></li>
+							<li class="menu__item"><a href="contacts.html" class="menu__link">КОНТАКТЫ</a></li>
+						</ul>
+					</nav>
+					<div class="menu__phone">
+						<a href="tel: +79994123443">+7 999 412-34-43</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<h1 class="contacts__title title">Контакты</h1>
+				<div class="contacts__block info-blog">
+					<div class="contacts__info info">
+						<h2 class="info__write-to-us">Напишите нам</h2>
+						<div class="info__text">Мы всегда рады ответить на интересующие вас вопросы. Заполните форму и наш специалист свяжется с вами.</div>
+						<form action="#" data-popup-message="#popup_accept" data-dev data-validate method="POST" class="info__form">
+							<div class="form-name__line_contacts">
+								<input class="form__name" data-required="" data-error="Введите имя" type="text" placeholder="Ваше имя" name="name">
+							</div>
+							<div class="form-email__line">
+								<input class="form__email" type="text" placeholder="Ваш e-mail" data-error="Введен не верный E-mail" data-required="email" name="e-mail">
+							</div>
+							<div class="form-question__line">
+								<input class="form__question" type="text" placeholder="Ваш вопрос" name="question">
+							</div>
+							<div class="form-file__line">
+								<input class="input__file" id="input__file" type="file" name="userfoto" multiple>
+								<label for="input__file" class="input__file-button">
+									<span class="input__file-icon-wrapper"><img class="input__file-icon" src="img/screpka.svg" alt="Выбрать файл" width="25"></span>
+									<span class="input__file-button-text">Выберите файл</span>
+								</label>
+							</div>
+							<div class="accept">
+								<button type="submit" class="form-button button"><span> Отправить</span></button>
+								<p>Нажимая на кнопку, я даю <a href="#" data-popup="#popup_agree">согласие на обработку персональных данных</a> </p>
+							</div>
+
+						</form>
+
+
+					</div>
+					<div class="contacts__contact info">
+						<h2 class="info__our-contacts">Наши контакты</h2>
+						<div class="info__connection">
+							<ul class="connection__list">
+								<li class="connection__li"><a href="tel: +79994123443">+7 999 412-34-43</a> </li>
+								<li class="connection__li"><a href="mailto:ladesign@inbox.ru">ladesign@inbox.ru</a></li>
+								<li class="connection__li"> <span>Пн - Сб 9:00 — 18:00</span> </li>
+								<li class="connection__li"> <span>г. Москва, <br> ул. Братьев Игнатовых, 1/1</span> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__info">
+					<div class="footer__social"><a href="#">houzz</a> <a href="#">instagram</a> </div>
+				</div>
+				<div class="footer__rights">
+					<p>© 2022 LA Design, all rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text">
+					<h1>ОСТАВЬТЕ СВОИ КОНТАКТЫ. МЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ</h1>
+				</div>
+				<form action="#" data-popup-message="#popup_accept" data-dev data-validate method="POST" class="form_tablet">
+					<div class="form__lines">
+						<div class="form-name__line">
+							<input class="form__name" data-required="" data-error="Введите имя" type="text" placeholder="Ваше имя" name="name">
+						</div>
+
+						<div class="form-telephone__line">
+							<input class="form__telephone" data-required="" data-error="Введите номер телефона" autocomplete="off" type="tel" placeholder="Ваш телефон" name="tel">
+						</div>
+
+					</div>
+					<div hidden class="check"><input type="text" disabled> </div>
+
+					<div class="accept">
+						<button type="submit" class="form-button button"><span> Отправить</span></button>
+						<p>Нажимая на кнопку, я даю <a href="#" data-popup="#popup_agree">согласие на обработку персональных данных</a> </p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="popup_accept" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text text_accept">
+					<div class="accept_image">
+						<img src="img/accept.svg" alt="">
+					</div>
+					<h1>Ваша Заявка успешно отправлена</h1>
+					<h2>Спасибо, что обратились в нашу студию. <br> Наш дизайнер с вами свяжется</h2>
+					<div class="footer__info">
+						<div class="footer__social"><a href="#">houzz</a> <a href="#">instagram</a> </div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="popup_agree" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text text_agree">
+					<p>Предоставляя свои персональные данные Покупатель даёт согласие на обработку, хранение и использование своих
+						персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:
+
+						регистрации Пользователя на сайте,
+						осуществление клиентской поддержки,
+						получения Пользователем информации о маркетинговых событиях,
+						выполнение Продавцом обязательств перед Покупателем,
+						проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.
+						Под персональными данными подразумевается любая информация личного характера, позволяющая установить
+						личность
+						Покупателя такая как:
+						Фамилия, Имя, Отчество,
+						дата рождения,
+						контактный телефон,
+						адрес электронной почты,
+						почтовый адрес.
+						<br>
+						<br>
+						Персональные данные Покупателей хранятся исключительно на электронных носителях и обрабатываются с
+						использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка
+						персональных данных необходима в связи с исполнением требований законодательства.
+						<br>
+						<br>
+						Продавец обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих
+						случаев:
+
+						по запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным
+						законодательством РФ,
+						стратегическим партнерам, которые работают с Продавцом для предоставления продуктов и услуг, или тем из них,
+						которые помогают Продавцу реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам
+						минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения
+						необходимой транзакции.
+						Продавец оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при
+						условии,
+						что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают
+						в
+						силу после их публикации на Сайте.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20220618204128"></script>
+</body>
+
+</html>
