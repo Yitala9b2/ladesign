@@ -1,6 +1,10 @@
-# ladesign
-<div  id="bicycle_description" align="center" >
-  <p> В данной работе была проделана большая работа по позиционированию изображений </p> 
+# ladesign 
+<div  id="ladesign_description" align="center" >
+  
+  <p> В данной работе использовались: слайдеры: swiper, попапы, "показать еще", бургер, галерея: light Gallery, анимации: animate.css, формат картинок подстраивается под браузер, выбирая наиболее подходящий формат, адаптив и многое многое другое. Сайт собирал Gulp</p>
+  
+  
+  
 :hammer_and_wrench: Languages and Tools :
   <br>
   <br>
