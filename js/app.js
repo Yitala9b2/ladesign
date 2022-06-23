@@ -3544,15 +3544,13 @@
         let page = document.querySelector(".grid");
         if (null != page) {
             let tabsLength1 = document.querySelectorAll(".tabs__title > span");
-            let all = Array.from(document.querySelector(".tabs__items_all").children);
-            let flats = Array.from(document.querySelector(".tabs__items_flats").children);
-            let houses = Array.from(document.querySelector(".tabs__items_houses").children);
-            let commercials = Array.from(document.querySelector(".tabs__items_commercials").children);
-            let allItems = document.querySelector(".tabs__items_all");
-            let flatsItems = document.querySelector(".tabs__items_flats");
-            let housesItems = document.querySelector(".tabs__items_houses");
-            let commercialsItems = document.querySelector(".tabs__items_commercials");
-            let arr = [ all, flats, houses, commercials ];
+            let allgrid = document.querySelectorAll('.grid');
+                var arr =[]
+            let classArr =[]
+            allgrid.forEach(element => {
+                arr.push(Array.from(element.children))
+                classArr.push(element)
+                });
             for (let i = 0; i < arr.length; i++) {
                 var num = Array.from(arr[i]);
                 if (0 != num.length) tabsLength1[i].innerHTML = num.length;
@@ -3740,8 +3738,9 @@
                             }
                         }
                     };
-                    MediaQueryNew.addListener(ifMatchesChange);
-                    ifMatchesChange(MediaQueryNew);
+                    for (let ind = 0; ind < arr.length; ind++) {
+                            createGrid(arr[ind], classArr[ind]);
+                        }
                 };
             }
             createGrid(all, allItems);
