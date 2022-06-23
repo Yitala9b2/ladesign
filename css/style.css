@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  color: #777777;
+  color: #77777;
   line-height: 1;
   font-family: "Roboto Condensed";
   font-size: 0.875rem;
@@ -162,7 +162,7 @@ body::after {
   padding: 30px 10px;
   -webkit-transition: visibility 0.8s ease 0s;
   -o-transition: visibility 0.8s ease 0s;
-  transition: visibility 0.8s ease 0s;
+  transition: visibility 0.7s ease 0s;
   visibility: hidden;
   pointer-events: none;
 }
