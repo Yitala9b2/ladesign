@@ -3754,16 +3754,28 @@
                             }
                         }
                     };
+                    MediaQueryNew.addListener(ifMatchesChange);
+                    ifMatchesChange(MediaQueryNew);
+                    };
+                    }
                     for (let ind = 0; ind < arr.length; ind++) {
                             createGrid(arr[ind], classArr[ind]);
-                        }
-                };
+                        
+                
             }
-            createGrid(all, allItems);
-            createGrid(flats, flatsItems);
-            createGrid(houses, housesItems);
-            createGrid(commercials, commercialsItems);
+           
         }
+         let parentshowMorebtn = document.querySelectorAll('.tabs__body');
+        let showMorebtn = document.querySelectorAll('.block__more');
+        showMorebtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                parentshowMorebtn.forEach(korob => {
+                    korob.classList.toggle('active');
+                });
+            });
+        });
+        
+        
         function menuInit() {
             if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
