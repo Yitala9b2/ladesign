@@ -3555,6 +3555,15 @@
                 var num = Array.from(arr[i]);
                 if (0 != num.length) tabsLength1[i].innerHTML = num.length;
             }
+            
+             for (let index = 0; index < er.length; index++) {
+                if (er[index].children.length <= 10) {
+                    let showMorebtn = document.querySelectorAll('.first')
+                    showMorebtn[index].style.display = 'none';
+                    document.querySelectorAll('.grid')[index].style.maxHeight = 'none';
+                }
+            }
+            
             function createGrid(item1, item2) {
                 window.addEventListener("load", (() => {
                     startQueries();
@@ -3585,8 +3594,13 @@
                                 item1[3].style.gridArea = "3/1/4/2";
                                 item1[4].style.gridArea = "3/2/4/3";
                             }
-                            if (6 == item1.length) item1[5].style.gridArea = "4/1/6/3";
-                            if (7 == item1.length) item1[6].style.gridArea = "6/1/7/3";
+                            if (6 == item1.length){
+                                item1[5].style.gridArea = "4/1/6/3";
+                            }
+                            if (7 == item1.length) {
+                                item1[5].style.gridArea = "4/1/6/3";
+                                item1[6].style.gridArea = "6/1/7/3";
+                            }
                             if (8 == item1.length) {
                                 item1[1].style.gridArea = "1 /2 /2/3";
                                 item1[2].style.gridArea = "2 /2 /3/3";
@@ -3673,6 +3687,8 @@
                             }
                             if (7 == item1.length) {
                                 item2.style.gridTemplateRows = "repeat(3, 275px)";
+                                item1[5].style.gridColumn = "3/5";
+                                item1[5].style.gridRow = "2/4";
                                 item1[6].style.gridArea = "3/1/4/3";
                             }
                             if (8 == item1.length) {
