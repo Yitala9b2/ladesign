@@ -3556,8 +3556,8 @@
                 if (0 != num.length) tabsLength1[i].innerHTML = num.length;
             }
             
-             for (let index = 0; index < er.length; index++) {
-                if (er[index].children.length <= 10) {
+             for (let index = 0; index < allgrid.length; index++) {
+                if (allgrid[index].children.length <= 10) {
                     let showMorebtn = document.querySelectorAll('.first')
                     showMorebtn[index].style.display = 'none';
                     document.querySelectorAll('.grid')[index].style.maxHeight = 'none';
