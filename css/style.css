@@ -724,7 +724,7 @@ body::after {
   padding: 0.625rem 0.9375rem;
 }
 
-[data-showmore-button].first {
+.block__more.first {
   width: 100%;
   text-align: center;
   -webkit-box-align: center;
@@ -732,7 +732,7 @@ body::after {
           align-items: center;
 }
 
-[data-showmore-button].first span {
+.block__more.first span {
   max-width: 290px;
   display: block;
   margin: 0 auto;
@@ -746,35 +746,68 @@ body::after {
   line-height: 16px;
 }
 
-[data-showmore-button].first span:hover {
+.block__more.first span:hover {
   color: #FFFFFF;
   background-color: #393246;
   border: 1px solid #393246;
 }
 
-[data-showmore-button].first span:last-child {
+
+
+.block__more span:last-child {
   display: none;
 }
 
-._showmore-active [data-showmore-button].first span {
+._showmore-active span {
   display: none;
 }
 
-._showmore-active [data-showmore-button].first span:last-child {
+._showmore-active span:last-child {
   display: block;
 }
 
-[data-showmore-button] span:last-child {
-  display: none;
-}
+.block__more.first :nth-child(2) {
+    display: none;
+  }
+  
+  .tabs__body.active .grid {
+    max-height: none;
+    transition: all 0.3s ease 0s;
+  }
+  .tabs__body.active .block__more.first :nth-child(1) {
+    display: none;
+  }
+  .tabs__body.active .block__more.first :nth-child(2) {
+    display: block;
+  }
 
-._showmore-active [data-showmore-button] span {
-  display: none;
-}
 
-._showmore-active [data-showmore-button] span:last-child {
-  display: block;
-}
+  .grid {
+    max-height: 1181px;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    position: relative;
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      max-height: 905px;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .grid {
+      max-height: 850px;
+    }
+  }
+
+
+
+
+
+  @media (max-width: 767.98px) {
+    .grid {
+      max-height: 830px;
+    }
+  }
 
 .btnwhite {
   font-size: 14px;
