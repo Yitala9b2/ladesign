@@ -3975,7 +3975,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   ._showmore-active [data-showmore-button].block__more {
-    margin-top: 42px;
+   
   }
 
   [data-showmore-button].first span {
