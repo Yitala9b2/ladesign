@@ -3763,17 +3763,17 @@
                         
                 
             }
-           
-        }
+
+                    }
          let parentshowMorebtn = document.querySelectorAll('.tabs__body');
         let showMorebtn = document.querySelectorAll('.block__more');
         showMorebtn.forEach(btn => {
             btn.addEventListener('click', () => {
                 parentshowMorebtn.forEach(korob => {
-                    korob.classList.toggle('active');
-                });
-            });
-        });
+                                korob.classList.toggle('active');
+                                });
+                                    });
+                        });
         
         
         function menuInit() {
