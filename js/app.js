@@ -3764,16 +3764,107 @@
                 
             }
 
+            let parentshowMorebtn = document.querySelectorAll('.tabs__body');
+            let showMoreBtn = document.querySelectorAll('.block__more');
+            let fortrbl = document.querySelectorAll('.fortr');
+            let windowWidth = window.screen.width;
+            function forTrans(){
+                let korobnull = 1190;
+                let korobmd1 = 905;
+                let korobmd2 = 850;
+                let korobmd3 = 830;
+                fortrbl.forEach(fortrchik=>{
+                mobile();
+                function mobile(){
+                
+                    const mql = window.matchMedia('(max-width: 991.98px)');
+                    checkMedia(mql);
+                    mql.addListener(checkMedia);
+                    function checkMedia(mql){
+                        if(mql.matches){
+                            if (!fortrchik.parentNode.classList.contains("active")) {
+                                fortrchik.style.maxHeight = korobmd3 + "px";
+                            
+                        }
+                        }
                     }
-         let parentshowMorebtn = document.querySelectorAll('.tabs__body');
-        let showMorebtn = document.querySelectorAll('.block__more');
-        showMorebtn.forEach(btn => {
-            btn.addEventListener('click', () => {
-                parentshowMorebtn.forEach(korob => {
+                }
+
+                tablet();
+                function tablet(){
+                const mql = window.matchMedia('(min-width: 992px) and (max-width: 1024px)');
+                checkMedia(mql);
+                mql.addListener(checkMedia);
+                    function checkMedia(mql){
+                        if(mql.matches){
+                            if (!fortrchik.parentNode.classList.contains("active")) {
+                                fortrchik.style.maxHeight = korobmd1 + "px";
+                        }
+                        }
+                    }
+                }
+
+                desktop();
+                function desktop(){
+                const mql = window.matchMedia('(min-width: 1025px)');
+                checkMedia(mql);
+                mql.addListener(checkMedia);
+                    function checkMedia(mql){
+                        if(mql.matches){
+                            if (!fortrchik.parentNode.classList.contains("active")) {
+                                fortrchik.style.maxHeight = korobnull + "px";
+                        }
+                        }
+                    }
+                }
+                
+
+
+            })
+
+            }
+            forTrans()
+            showMoreBtn.forEach(btn =>{
+                if (!btn.classList.contains('active')) {
+                    btn.addEventListener('click', ()=>{
+                        parentshowMorebtn.forEach(korob=>{
+                            if (!korob.hasAttribute('hidden')) {
                                 korob.classList.toggle('active');
+                                btn.classList.toggle('active');
+
+                                let gridenki = document.querySelectorAll('.grid')
+                                gridenki.forEach(gridenok =>{
+                                    let gridenokHeight = gridenok.offsetHeight;
+                                    gridenok.setAttribute('heightBlock', gridenokHeight)
                                 });
+                                
+                                fortrbl.forEach(fortrchik => {
+                                    let gr = fortrchik.querySelector('.grid')
+                                    let atrGr = gr.getAttribute('heightBlock')
+                                    fortrchik.style.maxHeight = atrGr + "px";
                                     });
+                            }
+                            if (korob.hasAttribute('hidden')) {
+                                korob.classList.remove('active')
+                            }
                         });
+                        forTrans()
+                    })
+                }
+            })
+
+
+           
+        }
+        //  let parentshowMorebtn = document.querySelectorAll('.tabs__body');
+        // let showMorebtn = document.querySelectorAll('.block__more');
+        // showMorebtn.forEach(btn => {
+        //     btn.addEventListener('click', () => {
+        //         parentshowMorebtn.forEach(korob => {
+        //             korob.classList.toggle('active');
+        //         });
+        //     });
+        // });
         
         
         function menuInit() {
