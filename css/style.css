@@ -781,14 +781,23 @@ body::after {
     display: block;
   }
 
+  .fortr{
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+  }
+
+  .tabs__body.active .fortr{
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+  }
 
   .grid {
-    max-height: 1181px;
+    /* max-height: 1181px; */
     overflow: hidden;
     transition: all 0.3s ease 0s;
     position: relative;
   }
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     .grid {
       max-height: 905px;
     }
@@ -807,7 +816,7 @@ body::after {
     .grid {
       max-height: 830px;
     }
-  }
+  } */
 
 .btnwhite {
   font-size: 14px;
