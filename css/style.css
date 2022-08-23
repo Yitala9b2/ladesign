@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  color: #77777;
+  color: #777777;
   line-height: 1;
   font-family: "Roboto Condensed";
   font-size: 0.875rem;
@@ -3935,50 +3935,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 }
 
-@media (max-width: 767.98px) {
-  .page2-mainSlider__slide {
-    height: 500px;
-  }
-}
-
-@media (max-width: 550px) {
-  .tabs__navigation {
-    overflow-x: auto;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-@media (max-width: 479.98px) {
-  .page2-mainSlider__slide {
-    height: 290px;
-  }
-
-  .swiper-button-prev:after,
-  .swiper-rtl .swiper-button-next:after {
-    margin-left: 20px;
-  }
-
-  .swiper-button-next:after,
-  .swiper-rtl .swiper-button-prev:after {
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 454px) {
-  .spollers__title {
-    letter-spacing: 0.05em;
-  }
-}
-
-@media (max-width: 320px) {
-  .page2-mainSlider__slide {
-    height: 290px;
-  }
-}
-
-@media (max-width: 61.99875em) {
+@media (max-width: 991.98px) {
   .popup-section {
     margin-top: 100px;
   }
@@ -4061,7 +4018,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 47.99875em) {
+@media (max-width: 770px) and (min-width: 770px) {
+  .rates .rate .rate__more {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page2-mainSlider__slide {
+    height: 500px;
+  }
   .form__lines {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4322,13 +4288,48 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 20px;
     line-height: 30px;
   }
+
 }
 
-@media (max-width: 770px) and (min-width: 770px) {
-  .rates .rate .rate__more {
-    display: none;
+@media (max-width: 550px) {
+  .tabs__navigation {
+    overflow-x: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
+
+@media (max-width: 479.98px) {
+  .page2-mainSlider__slide {
+    height: 290px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    margin-left: 20px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 454px) {
+  .spollers__title {
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 320px) {
+  .page2-mainSlider__slide {
+    height: 290px;
+  }
+}
+
+
+
 
 @media print, (prefers-reduced-motion: reduce) {
   .animated {
